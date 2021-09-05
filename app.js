@@ -26,7 +26,9 @@ function calculateResults(e) {
   if (isFinite(monthly)) {
     UImonthlyPayment.value = monthly.toFixed(2);
     UItotalPayment.value = (monthly * calculatedPayments).toFixed(2);
-    UItotalInterest.value = monthly * calculatedPayments - principal.toFixed(2);
+    UItotalInterest.value = (monthly * calculatedPayments - principal).toFixed(
+      2
+    );
   } else {
     showError("Please check you numbers");
   }
